@@ -1,0 +1,106 @@
+                                     KENJI KAWASHIMA
+                               DEVOPS & CLOUD INFRASTRUCTURE ENGINEER
+                Tokyo, Japan | k12major28k@gmail.com | linkedin.com/in/kenjikawashima-637a7a194
+
+PROFESSIONAL SUMMARY
+DevOps and Cloud Infrastructure Engineer with 5+ years of experience, including 4 years of hands-on AWS and Linux
+production operations. Operated a PCI DSS-compliant payment gateway processing about 10,000 transactions per
+minute, maintained about 100 Jenkins jobs, and led a zero-downtime CentOS 7 to Amazon Linux 2023 migration.
+Strong in CI/CD, IaC, containers, and security, with experience in payments and e-commerce.
+
+CORE SKILLS
+                         EC2, ECS, Fargate, Lambda, API Gateway, Step Functions, S3, SQS, EventBridge,
+AWS
+                         CloudFront, VPC, IAM, Cognito, WAF, Inspector
+Linux / Middleware       Amazon Linux, CentOS, Ubuntu, Nginx, Apache, MySQL
+IaC                      CloudFormation, AWS CDK (TypeScript), Ansible
+CI/CD                    Jenkins, CodeBuild/CodeDeploy, GitHub Actions, Blue/Green deployment
+Containers               Docker, ECS on Fargate
+Observability            CloudWatch, Datadog, Zabbix, Fluent Bit, AWS Config, Elastic Agent
+Incident Response        Opsgenie, Slack, on-call operations
+Scripting                Bash, Python, JavaScript
+Version Control          Git, GitHub, Bitbucket
+
+PROFESSIONAL EXPERIENCE
+Cloud Infrastructure & Security Engineer | Avanade K.K.
+Apr 2025 – Present | Tokyo, Japan
+• Designed AWS architecture for a public-sector ICT refresh (about 4,100 users, 30 servers, 50+ sites): accounts,
+   network, identity, CSPM, migration approach, and cost estimates.
+• Proposed an IaC approach (Terraform, GitHub-based CI/CD) for the AWS landing zone, networking, and centralized
+   logging.
+• Coordinated technical issues across 11 development divisions as part of a cross-project architecture governance
+   team.
+• Ran Entra ID and Intune tests; created 53 operation scenarios.
+• Collaborate daily in English with global colleagues through meetings and chat.
+
+Cloud & DevOps Engineer | Self-Employed
+Nov 2024 – Mar 2025 | Japan
+• Designed and built AWS infrastructure for a global security vendor’s SOC modernization PoC: two containerized
+   services on ECS Fargate, VPC, IAM, Amazon Cognito, and CloudWatch Logs.
+• Proposed and implemented IaC with AWS CDK (TypeScript) and CloudFormation to prepare for future service
+   operation.
+• Implemented Python-based API integrations with security products (Palo Alto, Cortex XDR, Microsoft Defender).
+• Troubleshot missing and delayed logs by tracing IAM permissions, network restrictions, and end-to-end data paths.
+• Clarified changing PoC requirements step by step using questionnaires, and shared knowledge with a 12-member
+   team.
+
+
+
+
+                                    Kenji Kawashima | DevOps & Cloud Infrastructure Engineer | 1
+DevOps & Site Reliability Engineer | NRI Netcom K.K. (NRI Group)
+Nov 2022 – Oct 2024 | Osaka, Japan
+Project 1: Payment gateway for the game industry (PCI DSS, production)
+• Operated AWS production for a PCI DSS-compliant payment gateway integrating multiple payment methods (about
+   10,000 transactions per minute).
+• Handled on-call incident response by phone and Slack (3–5 production incidents per week, average recovery under
+   30 minutes), using log analysis for root-cause investigation.
+• Monitored production systems with Zabbix (payment gateway) and Datadog (POSA platform), and managed alert
+   notifications with Opsgenie.
+• Managed access and application logs with CloudWatch and S3 to meet PCI DSS requirements.
+• Built a log collection platform with Fluent Bit.
+• Managed IaC for eight environments (CloudFormation, Ansible); cut provisioning from several days to about half a
+   day.
+• Contributed to configuration drift detection with AWS Config, detecting differences between IaC definitions and
+   actual AWS resources.
+• Built CI/CD with Jenkins and shell scripts; maintained about 100 Jenkins jobs, including release automation.
+• Built a PCI DSS v4 CSP-report storage platform with API Gateway and Lambda.
+• Tuned AWS WAF rules across six environments and ran weekly vulnerability triage (Amazon Inspector, Vuls).
+• Reported system status and vulnerabilities to the customer in weekly meetings.
+Project 2: Global POSA code-management platform (sub-lead)
+• Led a zero-downtime migration of Jenkins servers from CentOS 7 to Amazon Linux 2023 through planning,
+   announcements, and rehearsals (parallel run).
+• Performed Blue/Green deployments and improved CodeBuild/CodeDeploy flows for ECS.
+• Migrated six EC2 batch jobs to Step Functions and ECS, and replaced a self-managed Nginx proxy with API
+   Gateway.
+• Changed Apache configurations and added subdomains.
+• As sub-lead of a five-member team, reviewed and supported team members’ work.
+
+Full-Stack Software Engineer | Logical Arts K.K.
+Apr 2021 – Oct 2022 | Fukuoka, Japan
+• Developed and released features for an AWS-hosted e-commerce platform (Laravel/PHP, Vue.js, Nginx, MySQL,
+  Amazon Linux), including multi-year licenses and FAQ integration.
+• Built Bash batch processing that reduced manual email work from about five minutes per email to near zero.
+• Moved from developer to project owner; handled customer negotiation, estimates, and progress management.
+
+CERTIFICATIONS
+AWS                 • DevOps Engineer – Professional (2025)                     • Security – Specialty (2024)
+                    • Solutions Architect – Professional (2021,                 • SysOps Administrator – Associate (2022)
+                      renewed 2024)                                             • Developer – Associate (2023)
+Microsoft           • Azure Security Engineer – AZ-500 (2025)                   • Azure Administrator – AZ-104 (2026)
+                    • Identity and Access Administrator – SC-300                • Security Operations Analyst – SC-200 (2026)
+                       (2025)
+IPA                 • Information Security Specialist (2023)                    • Database Specialist (2024)
+Japanese National   • Applied Information Technology Engineer (2023)
+IT Exams (passed)
+
+
+EDUCATION & LANGUAGES
+Kobe University – Bachelor of Economics, Mar 2020 | Japanese: Native | English: Professional working
+proficiency
+
+
+
+
+                                       Kenji Kawashima | DevOps & Cloud Infrastructure Engineer | 2
+
