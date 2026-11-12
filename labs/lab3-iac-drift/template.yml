@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: IaC lab - two web servers and one security group
+Parameters:
+  KeyName: { Type: AWS::EC2::KeyPair::KeyName }
+  MyIp: { Type: String, Description: Your IP in CIDR form, for example 203.0.113.10/32 }
+  AmiId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64
+Resources:
+  WebSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: IaC lab web servers
+      SecurityGroupIngress:
+        - { IpProtocol: tcp, FromPort: 22, ToPort: 22, CidrIp: !Ref MyIp }
+        - { IpProtocol: tcp, FromPort: 80, ToPort: 80, CidrIp: !Ref MyIp }
+  Web1:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref AmiId
+      InstanceType: t3.micro
+      KeyName: !Ref KeyName
+      SecurityGroupIds: [!GetAtt WebSG.GroupId]
+      Tags: [{ Key: Name, Value: iac-lab-web1 }]
+  Web2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref AmiId
+      InstanceType: t3.micro
+      KeyName: !Ref KeyName
+      SecurityGroupIds: [!GetAtt WebSG.GroupId]
+      Tags: [{ Key: Name, Value: iac-lab-web2 }]
+Outputs:
+  Web1Ip: { Value: !GetAtt Web1.PublicIp }
+  Web2Ip: { Value: !GetAtt Web2.PublicIp }

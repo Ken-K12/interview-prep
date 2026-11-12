@@ -1,0 +1,30 @@
+- name: Configure web servers
+  hosts: web
+  become: true
+  tasks:
+    - name: Install nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+    - name: Add a custom Nginx config
+      ansible.builtin.copy:
+        dest: /etc/nginx/conf.d/lab.conf
+        content: |
+          server_tokens off;
+        mode: "0644"
+      notify: Reload nginx
+    - name: Publish the index page
+      ansible.builtin.copy:
+        dest: /usr/share/nginx/html/index.html
+        content: "Hello from {{ inventory_hostname }}\n"
+        mode: "0644"
+    - name: Start and enable nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+  handlers:
+    - name: Reload nginx
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded
